@@ -16,3 +16,5 @@ Q27: Yes, once I call the reset method and repeat the process as I did in the pr
 Q28: The fill method is used to fill in the number of cells with a state of zero.
 Q29: Once I reset the automaton so that more than one cell is initially in the 1-state, the patterns that emerge do look different this time. Those patterns are deterministic and there is a starting state that results in the same pattern emerging.
 Q31:
+Q32:
+Q35:
