@@ -16,5 +16,5 @@ Q27: Yes, once I call the reset method and repeat the process as I did in the pr
 Q28: The fill method is used to fill in the number of cells with a state of zero.
 Q29: Once I reset the automaton so that more than one cell is initially in the 1-state, the patterns that emerge do look different this time. Those patterns are deterministic and there is a starting state that results in the same pattern emerging.
 Q31: We used the new array, nextState in the update method because its used to represent the state of an object to what its going to transition to next or the state it will move to next.
-Q32: 
+Q32: If you want to avoid the problems, you have to keep two old value cells in temporary variables before you update them in the same array.
 Q35:
