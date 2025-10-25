@@ -12,7 +12,7 @@ public class Automaton
     private final int numberOfCells;
     // The state of the cells.
     private int[] state;
-    
+
     /**
      * Create a 1D automaton consisting of the given number of cells.
      * @param numberOfCells The number of cells in the automaton.
@@ -24,7 +24,18 @@ public class Automaton
         // Seed the automaton with a single 'on' cell in the middle.
         state[numberOfCells / 2] = 1;
     }
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public int calculateNextState(int left, int center, int right){
     
+        // put your code here
+        return (left + center + right) % 2;
+    }
+
     /**
      * Print the current state of the automaton.
      */
@@ -40,7 +51,7 @@ public class Automaton
         }
         System.out.println();
     }   
-    
+
     /**
      * Update the automaton to its next state.
      */
@@ -52,19 +63,19 @@ public class Automaton
         // based on the state of its two neighbors.
         int left = 0;
         int center = state[0];
-        
-        for(int i = 0; i < state.length; i++){
-            int right = i + 1 <state.length ? state[i + 1] : 0;
-            
-            nextState[i] = (left + center + right) % 2;
-            
+
+        for(int i = 0; i < numberOfCells; i++){
+            int right = state[i + 1];
+
+            nextState[i] = calculateNextState(left, center, right);
+
             left = center;
             center = right;
         }
-            
+
         state = nextState;
     }
-    
+
     /**
      * Reset the automaton.
      */
